@@ -56,7 +56,7 @@ namespace BookFlip
 				double b = -((m * midpoint.X) - midpoint.Y);
 				double x = (pageHeight - b) / m;
 
-				if (double.IsInfinity(m) || double.IsInfinity(b))
+				if (double.IsInfinity(m) || double.IsInfinity(b) || double.IsNaN(m) || double.IsNaN(b))
 					return;
 
 				int yForEdgePoint = (int)(m * (pageWidth * 2) + b);
